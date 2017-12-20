@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'mySpider.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'mySpider (+http://www.yourdomain.com)'
-
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -64,9 +64,10 @@ ROBOTSTXT_OBEY = True
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'mySpider.pipelines.ItcastPipeline': 300,
-    'mySpider.pipelines.DoubanJsonPipeline': 300,
-    # 'mySpider.pipelines.TencentJsonPipeline': 300,
+    'mySpider.pipelines.ItcastPipeline': 300,
+    # 'mySpider.pipelines.DoubanJsonPipeline': 300,
+    'mySpider.pipelines.DoubanTagJsonPipeline': 300,
+    'mySpider.pipelines.TencentJsonPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

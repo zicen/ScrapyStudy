@@ -7,6 +7,7 @@
 
 import scrapy
 
+
 class ItcastItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -22,6 +23,11 @@ class TencentItem(scrapy.Item):
     peopleNumber = scrapy.Field()
     workLocation = scrapy.Field()
     publishTime = scrapy.Field()
+
+
+class DoubanTagItem(scrapy.Item):
+    name = scrapy.Field()
+    tag_url = scrapy.Field()
 
 
 class DoubanBookItem(scrapy.Item):

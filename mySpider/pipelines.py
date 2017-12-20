@@ -33,14 +33,27 @@ class TencentJsonPipeline(object):
         self.file.close()
 
 
-class DoubanJsonPipeline(object):
+class DoubanTagJsonPipeline(object):
     def __init__(self):
-        self.file = open('douban.json','wb')
+        self.file = open('doubantag.json', 'wb')
 
-    def process_item(self,item,spider):
-        content = json.dumps(dict(item),ensure_ascii=False)+"\n"
+    def process_item(self, item, spider):
+        content = json.dumps(dict(item), ensure_ascii=False) + "\n"
         self.file.write(content)
         return item
 
-    def close_spider(self,spider):
+    def close_spider(self, spider):
+        self.file.close()
+
+
+class DoubanJsonPipeline(object):
+    def __init__(self):
+        self.file = open('douban.json', 'wb')
+
+    def process_item(self, item, spider):
+        content = json.dumps(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(content)
+        return item
+
+    def close_spider(self, spider):
         self.file.close()
