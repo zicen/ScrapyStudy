@@ -18,7 +18,7 @@ NEWSPIDER_MODULE = 'mySpider.spiders'
 # USER_AGENT = 'mySpider (+http://www.yourdomain.com)'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -32,7 +32,7 @@ ROBOTSTXT_OBEY = True
 # CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+# COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
@@ -64,12 +64,13 @@ COOKIES_ENABLED = False
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'mySpider.pipelines.ItcastPipeline': 300,
-    'mySpider.pipelines.DoubanJsonPipeline': 300,
-    'mySpider.pipelines.DoubanTagJsonPipeline': 300,
+    # 'mySpider.pipelines.ItcastPipeline': 300,
+    # 'mySpider.pipelines.DoubanJsonPipeline': 300,
+    # 'mySpider.pipelines.DoubanTagJsonPipeline': 300,
     'mySpider.pipelines.TencentJsonPipeline': 300,
+    'mySpider.pipelines.DouyuImagesPipeline': 200
 }
-
+IMAGES_STORE = "C:\\Users\\ry\\Desktop\\image"
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # AUTOTHROTTLE_ENABLED = True

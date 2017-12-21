@@ -44,3 +44,10 @@ class ZhihuItem(scrapy.Item):
     description = scrapy.Field()
     answer = scrapy.Field()
     name = scrapy.Field()
+
+
+class DouyuspiderItem(scrapy.Item):
+    name = scrapy.Field()
+    imageUrls = scrapy.Field()
+    imagesPath = scrapy.Field()
+
