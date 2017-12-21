@@ -9,7 +9,7 @@ sys.setdefaultencoding("utf-8")
 
 
 class DoubanSpider(scrapy.Spider):
-    name = 'douban'
+    name = 'doubanTag'
     allowed_domains = ['book.douban']
     start_urls = ['https://book.douban.com/tag/']
 

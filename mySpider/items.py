@@ -32,13 +32,15 @@ class DoubanTagItem(scrapy.Item):
 
 class DoubanBookItem(scrapy.Item):
     name = scrapy.Field()
-    book_name = scrapy.Field()
     image_url = scrapy.Field()
-    title = scrapy.Field()
-    author = scrapy.Field()
-    press = scrapy.Field()
-    press_time = scrapy.Field()
-    price = scrapy.Field()
-    translater = scrapy.Field()
+    title_pub = scrapy.Field()
     introduction = scrapy.Field()
     star = scrapy.Field()
+
+
+class ZhihuItem(scrapy.Item):
+    url = scrapy.Field()
+    title = scrapy.Field()
+    description = scrapy.Field()
+    answer = scrapy.Field()
+    name = scrapy.Field()
