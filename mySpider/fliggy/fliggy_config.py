@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# 2017-11-08
-# ZhaoHengLei 
 # 抓取配置
 
 # 页面URL及传参示例： 

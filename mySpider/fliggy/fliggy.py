@@ -1,7 +1,5 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-# 2017-11-08
-# ZhaoHengLei
 # 飞猪航班数据抓取 
 
 import os, sys, time, re, json
