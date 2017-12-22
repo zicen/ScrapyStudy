@@ -51,3 +51,19 @@ class DouyuspiderItem(scrapy.Item):
     imageUrls = scrapy.Field()
     imagesPath = scrapy.Field()
 
+# 阳光热线
+class DongguanItem(scrapy.Item):
+    title = scrapy.Field()
+    number = scrapy.Field()
+    content = scrapy.Field()
+    url = scrapy.Field()
+
+
+#feizhu
+class FeizhuItem(scrapy.Item):
+    fno = scrapy.Field()
+    company = scrapy.Field()
+    acity = scrapy.Field()
+    dcity = scrapy.Field()
+    date = scrapy.Field()
+    price = scrapy.Field()

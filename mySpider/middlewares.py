@@ -22,7 +22,7 @@ class RandomProxy(object):
     def proces_request(self, request, spider):
         proxy = random.choice(PROXIES)
         print "proxy:"+str(proxy)
-
+        print proxy
         if proxy['user_passwd'] is None:
             # 没有代理账户验证的代理使用方式
             request.meta['proxy'] = "http://" + proxy['ip_port']
