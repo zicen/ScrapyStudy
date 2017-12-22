@@ -8,7 +8,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 
 
-# 使用普通的模式去爬取豆瓣读书tag=小说的书籍  ,多页爬取
+# 使用普通的模式去爬取豆瓣读书tag=小说的书籍  ,多页爬取  filename = douban.json
 class DoubanSpider(scrapy.Spider):
     name = 'douban'
     allowed_domains = ['book.douban.com']

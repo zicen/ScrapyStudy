@@ -37,6 +37,19 @@ class TencentJsonPipeline(object):
         self.file.close()
 
 
+class TencentJsonPipeline2(object):
+    def __init__(self):
+        self.file = open('tencent2.json', 'wb')
+
+    def process_item(self, item, spider):
+        content = json.dumps(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(content)
+        return item
+
+    def close_spider(self, spider):
+        self.file.close()
+
+
 class DoubanTagJsonPipeline(object):
     def __init__(self):
         self.file = open('doubantag.json', 'wb')
@@ -53,6 +66,19 @@ class DoubanTagJsonPipeline(object):
 class DoubanJsonPipeline(object):
     def __init__(self):
         self.file = open('douban.json', 'wb')
+
+    def process_item(self, item, spider):
+        content = json.dumps(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(content)
+        return item
+
+    def close_spider(self, spider):
+        self.file.close()
+
+
+class DoubanJsonPipeline2(object):
+    def __init__(self):
+        self.file = open('douban2.json', 'wb')
 
     def process_item(self, item, spider):
         content = json.dumps(dict(item), ensure_ascii=False) + "\n"

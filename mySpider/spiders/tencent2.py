@@ -4,6 +4,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from mySpider.items import TencentItem
 
+# 爬取腾讯hr页面的信息,使用进阶的模式,也就是crawlSpider
 class Tencent2Spider(CrawlSpider):
     name = 'tencent2'
     allowed_domains = ['tencent.com']

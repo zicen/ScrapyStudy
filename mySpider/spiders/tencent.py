@@ -7,7 +7,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
-
+# 爬取腾讯hr页面的信息,使用普通的模式
 class TencentSpider(scrapy.Spider):
     name = "tencent"
     allowed_domains = ["hr.tencent.com"]

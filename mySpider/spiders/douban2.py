@@ -4,7 +4,7 @@ from scrapy.linkextractors import LinkExtractor
 from scrapy.spiders import CrawlSpider, Rule
 from mySpider.items import DoubanBookItem
 
-
+#使用另一种方式crawlSpider的方式去爬取豆瓣小说的book信息,filename = douban2.json
 class Douban2Spider(CrawlSpider):
     name = 'douban2'
     allowed_domains = ['douban.com']
