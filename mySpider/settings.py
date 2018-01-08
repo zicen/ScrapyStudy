@@ -86,11 +86,12 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     # 'mySpider.pipelines.ItcastPipeline': 300,
     # 'mySpider.pipelines.DoubanJsonPipeline': 300,
-    'mySpider.pipelines.DoubanJsonPipeline2': 300,
+    # 'mySpider.pipelines.DoubanJsonPipeline2': 300,
     # 'mySpider.pipelines.DoubanTagJsonPipeline': 300,
     # 'mySpider.pipelines.TencentJsonPipeline': 300,
     # 'mySpider.pipelines.TencentJsonPipeline2': 300,
-    # 'mySpider.pipelines.DouyuImagesPipeline': 200
+    # 'mySpider.pipelines.DouyuImagesPipeline': 200,
+    'mySpider.pipelines.FeiZhuPipLine': 200    #飞猪机票航班信息
 }
 # 本地爬取的斗鱼的图片信息,根据自己的情况进行修改
 IMAGES_STORE = "C:\\Users\\ry\\Desktop\\image"

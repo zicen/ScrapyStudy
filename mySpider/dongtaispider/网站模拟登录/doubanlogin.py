@@ -8,11 +8,11 @@ driver.get("https://accounts.douban.com/login?alias=&redir=https%3A%2F%2Fwww.dou
 time.sleep(3)
 
 #输入帐号密码
-driver.find_element_by_name("form_email").send_keys("1140377034@qq.com")
+driver.find_element_by_name("form_email").send_keys("18861816083")
 driver.find_element_by_name("form_password").send_keys("320316www")
 
 #模拟点击登录
-driver.find_element_by_xpath("//input[@class='bn_submit']").click()
+driver.find_elements_by_class_name("btn-submit")[0].click()
 
 #等待3s
 
@@ -20,6 +20,6 @@ driver.find_element_by_xpath("//input[@class='bn_submit']").click()
 driver.save_screenshot("douban.png")
 
 with open("douban.html","w") as file:
-    file.write(driver.page_source)
+    file.write(driver.page_source.replace(u'\xa9', u''))
 
 driver.quit()

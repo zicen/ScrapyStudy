@@ -101,3 +101,16 @@ class DouyuImagesPipeline(ImagesPipeline):
         os.rename(self.IMAGES_STORE + "/" + image_path[0], self.IMAGES_STORE + "/" + item["name"] + ".jpg")
         item["imagesPath"] = self.IMAGES_STORE + "/" + item["name"]
         return item
+
+
+class FeiZhuPipLine(object):
+    def __init__(self):
+        self.file = open('feizhu.json', 'wb')
+
+    def process_item(self, item, spider):
+        content = json.dump(dict(item), ensure_ascii=False) + "\n"
+        self.file.write(content)
+        return item
+
+    def close_spider(self, spider):
+        self.file.close()
